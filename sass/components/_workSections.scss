@@ -1,0 +1,89 @@
+/* Main Sections */
+.section {
+  width: 100%;
+  padding: 94px 0;
+}
+.section__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--text-title-color);
+  margin-bottom: 50px;
+}
+
+/* Наши преимущества index */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+.thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.advantage-icon {
+  width: 70px;
+  height: 70px;
+}
+.section-list {
+  display: flex;
+}
+.section-list__item {
+  margin-right: 30px;
+  padding: 0;
+}
+.section-list__item:last-child {
+  margin-right: 0;
+}
+.section-list__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: var(--text-title-color);
+}
+.section-list__text {
+  font-size: 14px;
+  line-height: 1.71;
+}
+/* what we do section */
+.work-section {
+  padding-top: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.section-list__box {
+  position: relative;
+}
+.section-list__overlay {
+  position: absolute;
+  display: flex;
+  width: 370px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  bottom: 0px;
+  background: rgba(47, 48, 58, 0.8);
+}
+.section-list__overlay-text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
