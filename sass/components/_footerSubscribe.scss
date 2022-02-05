@@ -1,5 +1,9 @@
 .subscribe {
-  margin-left: 93px;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    margin-top: 60px;
+  }
 }
 .subscribe-form {
   display: flex;

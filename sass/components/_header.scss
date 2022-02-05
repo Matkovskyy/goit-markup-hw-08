@@ -4,4 +4,28 @@
 .header__container {
   display: flex;
   align-items: center;
+  // position: relative;
+}
+// .menu-container {
+//   // display: none;
+//   position: absolute;
+//   top: 100%;
+//   left: 0;
+//   width: 100%;
+// }
+.mobile-menu-button {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+}
+.mobile-menu-button .icon-cross {
+  display: none;
+}
+.mobile-menu-button.is-open .icon-cross {
+  display: block;
+}
+.mobile-menu-button.is-open .icon-menu {
+  display: none;
 }

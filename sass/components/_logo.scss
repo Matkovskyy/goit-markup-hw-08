@@ -5,7 +5,10 @@
   line-height: 1.19;
   color: var(--accent-color);
   text-decoration: none;
-  margin-right: 93px;
+  @media screen and (min-width: 1199px) {
+    margin-right: 93px;
+    align-items: baseline;
+  }
 }
 .accent {
   color: var(--text-title-color);

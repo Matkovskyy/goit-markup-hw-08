@@ -1,12 +1,29 @@
 .customers {
   display: flex;
+  padding: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 .customers__item {
-  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // margin-right: 30px;
   width: 170px;
   height: 92px;
-  &:last-child {
-    margin-right: 0;
+  margin: 15px;
+  // &:last-child {
+  //   margin-right: 0;
+  // }
+  @media screen and (max-width: 767px) {
+    max-width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+.customers__item:last-child {
+  @media screen and (min-width: 1199px) {
+    margin-right: 0px;
   }
 }
 .customers__link {

@@ -10,6 +10,11 @@
   text-align: center;
   color: var(--text-title-color);
   margin-bottom: 50px;
+  @media screen and (max-width: 1198px) {
+    font-size: 28px;
+    line-height: 1.18px;
+    margin-bottom: 30px;
+  }
 }
 
 /* Наши преимущества index */
@@ -24,7 +29,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
+  // width: 270px;
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
@@ -35,15 +40,33 @@
   height: 70px;
 }
 .section-list {
-  display: flex;
+  // display: flex;
+  @media screen and (min-width: 480px) {
+    padding-left: 0;
+    margin: 0;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1199px) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
+
 .section-list__item {
   margin-right: 30px;
   padding: 0;
+  &:last-child {
+    margin-right: 0;
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
 }
-.section-list__item:last-child {
-  margin-right: 0;
-}
+
 .section-list__title {
   font-weight: 700;
   font-size: 14px;
@@ -59,6 +82,9 @@
 /* what we do section */
 .work-section {
   padding-top: 0;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 img {
   display: block;
