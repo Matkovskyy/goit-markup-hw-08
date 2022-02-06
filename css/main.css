@@ -54,6 +54,7 @@ ul {
 }
 
 .header {
+  position: relative;
   border: 1px solid #ececec;
 }
 
@@ -66,6 +67,45 @@ ul {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 15px;
+}
+
+.menu-container {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+}
+
+.menu-container.is-open {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .mobile-menu-button {
@@ -74,6 +114,12 @@ ul {
   display: inline-block;
   border: none;
   background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu-button {
+    display: none;
+  }
 }
 
 .mobile-menu-button .icon-cross {
@@ -95,6 +141,12 @@ ul {
   line-height: 1.19;
   color: var(--accent-color);
   text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+  }
 }
 
 @media screen and (min-width: 1199px) {
@@ -165,8 +217,28 @@ ul {
   margin-left: auto;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1198px) {
+  .address {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .address .address__item + .address__item {
   margin-left: 50px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1198px) {
+  .address .address__item + .address__item {
+    margin-left: 0;
+  }
 }
 
 .address__link {
@@ -276,6 +348,24 @@ ul {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 479px) {
+  .modal {
+    min-width: 320px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 
 .modal__headline {
@@ -1184,6 +1274,22 @@ address {
           justify-content: center;
 }
 
+@media screen and (max-width: 767px) {
+  .filter {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .filter__button {
   background-color: var(--secondary-accent-color);
   color: var(--text-title-color);
@@ -1223,6 +1329,12 @@ address {
   margin-right: 8px;
 }
 
+@media screen and (max-width: 767px) {
+  .filter__item {
+    margin-bottom: 15px;
+  }
+}
+
 .filter__item:last-child {
   margin-right: 0;
 }
@@ -1239,12 +1351,23 @@ address {
   margin-top: -30px;
 }
 
-.gallery__item {
-  -webkit-flex-basis: -webkit-calc(100% / 3 - 30px);
-      -ms-flex-preferred-size: calc(100% / 3 - 30px);
-          flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .gallery__item {
+    -webkit-flex-basis: -webkit-calc((100% - 2 * 30px) / 2);
+        -ms-flex-preferred-size: calc((100% - 2 * 30px) / 2);
+            flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .gallery__item {
+    -webkit-flex-basis: -webkit-calc(100% / 3 - 30px);
+        -ms-flex-preferred-size: calc(100% / 3 - 30px);
+            flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
 }
 
 .gallery__link {

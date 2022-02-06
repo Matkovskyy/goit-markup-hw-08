@@ -22,6 +22,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media screen and(max-width:479px) {
+    min-width: 320px;
+  }
+  @media screen and(min-width:480px) {
+    width: 450px;
+  }
+  @media screen and(min-width: 1200px) {
+    width: 528px;
+  }
 }
 .modal__headline {
   font-style: normal;

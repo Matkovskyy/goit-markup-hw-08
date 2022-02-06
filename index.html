@@ -18,7 +18,15 @@
     <header class="header">
      <div class="container header__container">
         <a href="" class="logo">Web<span class="accent">Studio</span></a>
-         <nav>
+        <button type="button" class="mobile-menu-button is-open" data-mobile-menu-button>
+            <svg width="40" height="40" aria-label="
+                                       Переключатель мобильного меню">
+                <use class="icon-menu" href="./images/icons.svg#icon-menu_24px"></use>
+                <use class="icon-cross" href="./images/icons.svg#icon-close_24px"></use>
+            </svg>
+        </button>
+        <div class="menu-container is-open" id="menu-container" data-menu>
+            <nav>
              <ul class="nav">
                 <li class="nav__item"><a href="" class="nav__link nav__link--current">Студия</a></li>
                 <li class="nav__item"><a href="./portfolio.html" class="nav__link">Портфолио</a></li>
@@ -39,15 +47,15 @@
                       <use href="images/icons.svg#smartphone"></use> 
                     </svg>+38 096 111 11 11</a>
                 </li>
-            </ul> 
-            <button type="button" class="mobile-menu-button is-open" data-mobile-menu-button>
-                   <svg width="40" height="40" aria-label="
-                   Переключатель мобильного меню">
-                       <use class="icon-menu" href="./images/icons.svg#icon-menu_24px"></use>
-                       <use class="icon-cross" href="./images/icons.svg#icon-close_24px"></use>
-                   </svg>
-               </button> 
-     </div>
+            </ul>
+            <!-- <ul class="menu-cocial">
+                <li class="menu-cocial__icon">Instagram</li>
+                <li class="menu-cocial__icon">Twitter</li>
+                <li class="menu-cocial__icon">Facebook</li>
+                <li class="menu-cocial__icon">LinkedIn</li>
+            </ul> -->
+        </div>
+      </div>
     </header>
     <main>
        <!--Hero-->
@@ -181,7 +189,8 @@
             <h2 class="section__title">Наша команда</h2>
             <ul class="team">
              <li class="team__item">
-                 <img src="./images/igordemyanenko.jpg" alt="Igor Demyanenko" width="270" />
+                 <img src="./images/igordemyanenko.jpg" alt="Igor Demyanenko" width="270" />    
+                                  
               <div class="team__thumb">
                  <h3 class="team__title">Игорь Демьяненко</h3>
                  <p class="team__text">Product Designer</p> 
@@ -402,5 +411,6 @@
         </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
     </body>
 </html>
