@@ -5,15 +5,19 @@
 .header__container {
   display: flex;
   align-items: center;
-  flex-direction: row;
   margin-right: auto;
   margin-left: auto;
   padding: 15px;
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
 }
 
 .menu-container {
   &.is-open {
-    display: block;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
   }
   align-items: center;
   background-color: rgba(255, 255, 255, 1);
@@ -26,6 +30,12 @@
   }
   @media screen and (min-width: 768px) {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 1199px) {
+    width: 100%;
+    justify-content: space-between;
   }
 }
 .mobile-menu-button {

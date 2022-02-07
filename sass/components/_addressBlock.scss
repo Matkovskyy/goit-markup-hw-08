@@ -27,6 +27,9 @@
   &:focus {
     color: var(--accent-color);
   }
+  @media screen and (min-width: 768px) and (max-width: 1198px) {
+    padding: 5px 0;
+  }
 }
 .address__icon {
   width: 16px;
